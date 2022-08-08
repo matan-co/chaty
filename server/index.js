@@ -12,6 +12,10 @@ app.get("/api/hello", (req, res) => {
   res.send("Hello World");
 });
 
+app.get("/api/hello/kobi", (req, res) => {
+  res.send("Hello Kobi");
+});
+
 app.get("*", (req, res) => {
   res.sendFile(path.join(publicPath, "index.html"));
 });
