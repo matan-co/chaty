@@ -9,11 +9,7 @@ const port = process.env.PORT || 3000;
 app.use(express.static(publicPath));
 
 app.get("/api/hello", (req, res) => {
-  res.send("Hello World");
-});
-
-app.get("/api/hello/kobi", (req, res) => {
-  res.send("Hello Kobi");
+  res.send("Hello World" + process.env.NAME);
 });
 
 app.get("*", (req, res) => {
